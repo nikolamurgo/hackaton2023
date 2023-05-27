@@ -3,18 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav><img src="https://storage.googleapis.com/jp-content/logo_original_positiv_by_GCB_620b137c8d/logo-original-positiv_by-GCB.svg_logo_original_positiv_by_GCB_620b137c8d.svg" id="navslika">
+        <nav>
+            <img src="https://storage.googleapis.com/jp-content/logo_original_positiv_by_GCB_620b137c8d/logo-original-positiv_by-GCB.svg_logo_original_positiv_by_GCB_620b137c8d.svg" id="navslika">
             <button id="login">LOGIN</button>
+            <button type="submit" id="register">Register</button>
+
         </nav>
     </header>
     <div>
         <img src="slikapodnav.png" id="slikapodnav">
     </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>REGISTER TO PLAY</h2>
+            <form>
+                <!-- <span>SIGN IN</span><br> -->
+                <label for="email"></label>
+                <input type="text" placeholder="Name"><br>
+                <input type="email" id="email" name="email" required placeholder="email">
+                <br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" required placeholder="password"><br>
+                <input type="password" id="password" name="password" required placeholder="password"><br>
+                <button type="submit" id="next">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>NO ACCOUNT YET?</h2>
+            <form>
+                <span>SIGN IN</span><br>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" required>
+                
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <!-- <div id="nextthing" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>hey</h2>
+        </div>
+    </div> -->
+
+    <script src="app.js"></script>
 </body>
 </html>
