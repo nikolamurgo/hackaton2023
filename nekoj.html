@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Process</title>
+  <style>
+    body{
+      background-image: url(blurnato1.jpg);
+      background-size: cover;
+    }
+    .form-page {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 650px;
+      padding: 20px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    
+    min-height: 200px;
+    background: rgb(249, 245, 245);
+    border-radius: 5px;
+    text-align: center;
+    }
+
+    #page1 {
+      display: block;
+    }
+
+    .page-number {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 5px;
+    }
+    #name, #email, #password, #confirm-password, #location, #personal-info{
+      margin: 10px;
+      width: 200px;
+      height: 35px;
+      border-radius: 0.5em;
+      border: 1px solid rgb(229, 224, 224);
+    }
+    #name:hover, #email:hover, #password:hover, #confirm-password:hover, #location:hover, #personal-info:hover{
+      border: 1px solid black;
+    }
+    #regtoplay, #personalinformationh1{
+      margin-top: 15%;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 40px;
+    }
+    #nextbutton, #next2, #next3, #next4, #next5{
+      border: 0px solid transparent;
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      color: white;
+      font-size: 20px;
+      margin-top: 2%;
+      border-radius: 0.4em;
+
+    }
+  </style>
+  <!-- <script src="timer.js"></script> -->
+</head>
+
+<body>
+  <div class="form-page" id="page1">
+    <div class="page-number">Page 1 of 5</div>
+    <h1 id="regtoplay">REGISTER TO PLAY</h1>
+    <input type="text" id="name" placeholder="Name" required><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <input type="password" id="confirm-password" placeholder="Confirm Password" required><br>
+    <div class="error-message" id="page1-error"></div>
+    <button id="nextbutton" onclick="validateAndOpenPage('page2', 'page1-error', 1)">Next</button>
+  </div>
+
+  <div class="form-page" id="page2">
+    <div class="page-number">Page 2 of 5</div>
+    <h1 id="personalinformationh1">PERSONAL INFORMATION</h1>
+    <input type="text" id="location" placeholder="Location" required><br>
+    <input type="text" id="personal-info" placeholder="Personal Information" required><br>
+    <div class="error-message" id="page2-error"></div>
+    <button id="next2" onclick="validateAndOpenPage('page3', 'page2-error', 2);">Next</button>
+  </div>
+
+  <div class="form-page" id="page3">
+    <div class="page-number">Page 3 of 5</div>
+    <h1>Iframe Integration 1</h1>
+    <iframe style="width: 100%; height: 50%;" src="https://cdn.oryxgaming.com/badges/GAM/GAM001/om1.51.0_CS58/index.html?cageCode=GAM001&amp;languageCode=ENG&amp;gameCode=GAM_CRB&amp;token=token&amp;lobbyUrl=OFF&amp;historyUrl=GAMEBRIDGE&amp;playMode=2&amp;isGameBridge=true" id="gameWindow"></iframe>
+    <p>This is a pop-up window for iframe integration 1.</p>
+    <div class="error-message" id="page3-error"></div>
+    <button id="next3" onclick="validateAndOpenPage('page4', 'page3-error', 3);">Next</button>
+  </div>
+
+  <div class="form-page" id="page4">
+    <div class="page-number">Page 4 of 5</div>
+    <h1>Iframe Integration 2</h1>
+    <iframe id="flashBox" src="https://gaming1-ch01.ice-elite.com/GGM/GameLaunch.aspx?PlayerId=ab835b1e-b726-47f4-9b49-27c1214811a6&amp;Pseudo=Guest&amp;CurrencyCode=CHF&amp;CountryCode=BE&amp;Language=en&amp;RoomId=62575305-77ee-4fdc-9f42-02baacd4fda6&amp;MoneyType=0&amp;GameId=9977d1fe-4418-d0ef-2c80-33a5a141c602&amp;AuthToken=87f56be9-52ed-4629-a05e-1f5fdeef725f&amp;ExitUrl=https%3a%2f%2fwww.jackpots.ch%2flobby-handler.html%3fnavigate%3dhttps%3a%2f%2fwww.jackpots.ch%2f&amp;GameLaunch_RemoveHomeButton=1&amp;GameLaunch_RemoveRestartButton=1&amp;GameLaunch_PartnerName=JACKPOTSCH&amp;IsG1Sender=True" allowfullscreen="" width="100%" height="50%" class="autoResize" allow="autoplay;fullscreen *;"></iframe>
+    <p>This is a pop-up window for iframe integration 2.</p>
+    <div class="error-message" id="page4-error"></div>
+    <button id="next4" onclick="validateAndOpenPage('page5', 'page4-error', 4);">Next</button>
+  </div>
+
+  <div class="form-page" id="page5">
+    <div class="page-number">Page 5 of 5</div>
+    <h1>Iframe Integration 3</h1>
+    <iframe style="width: 100%; height: 50%;" src="https://redirector3.valueactive.eu/Casino/Default.aspx?applicationid=4123&amp;serverid=30834&amp;gameid=switchMultifireRouletteDesktop&amp;ul=en&amp;lobbyURL=https://www.jackpots.ch/lobby-handler.html?navigate=https://www.jackpots.ch/&amp;playmode=demo"><p>Can not load page</p></iframe>
+    <p>This is a pop-up window for iframe integration 3.</p>
+
+    <button id="next5" onclick="completeRegistration(5);">Complete</button>
+  </div>
+  
+
+  <script>
+
+    var firstGame = 0;
+    var secondGame = 0;
+    var thirdGame = 0;
+    var seconds;
+    
+
+    function startStop(str){
+
+      if(str == 2){
+        timerStart();
+        return;
+      }
+
+      if(str == 3){
+        firstGame = TotalSecFractions;
+      }
+
+      else if(str == 4){
+        secondGame = TotalSecFractions;
+      }
+
+      reset();
+    };
+
+    function printsth(){
+      console.log("print times");
+      console.log(firstGame);
+      console.log(secondGame);
+      console.log(thirdGame);
+    };
+
+
+
+
+    var TotalSecFractions=0
+	var timerInterval=null;
+	var timerStarted=false;
+	
+	function makeTimerText(secFractions)
+	{
+		var seconds = Math.floor(secFractions / 10);
+
+		if (seconds<10){
+			seconds=""+seconds;
+		}
+		return seconds;
+	}
+var currentSecond = -1;
+
+	function incrementTimeByOneFraction(){
+		TotalSecFractions++;
+		document.getElementById("timer").innerHTML=makeTimerText(TotalSecFractions);
+
+
+    	var seconds = Math.floor(TotalSecFractions / 10);
+
+	}
+
+	function timerStart(){
+		if(timerStarted==false){
+			timerInterval=stimerInterval=setInterval(incrementTimeByOneFraction, 100);
+			timerStarted=true;
+		} 
+		else{
+			return;
+		}
+	}
+
+	function timerStop(){
+		clearInterval(timerInterval);
+		timerStarted=false;
+	}
+
+
+	function reset(){
+		TotalSecFractions=0;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let currentPage = 'page1';
+    const totalPages = 5;
+    const formData = {}; // Object to store form data
+
+    function openPage(pageId) {
+      if (pageId !== currentPage) {
+        document.getElementById(currentPage).style.display = "none";
+        currentPage = pageId;
+        document.getElementById(currentPage).style.display = "block";
+      }
+    }
+
+    function validateAndOpenPage(nextPageId, errorMessageId, index) {
+
+      if(index == 2)
+        timerStart;
+      else if(index == 3){
+        firstGame=seconds;
+        console.log(firstGame);
+        reset();
+      }
+      else if(index == 4){
+        secondGame=seconds;
+        console.log(secondGame);
+        reset();
+      }
+      
+      inputs = document.querySelectorAll(`#${currentPage} input`);
+      let isValid = true;
+
+      inputs.forEach(input => {
+        if (input.value.trim() === '') {
+          isValid = false;
+        }
+      });
+
+      if (isValid) {
+        document.getElementById(errorMessageId).textContent = '';
+        openPage(nextPageId);
+      } else {
+        document.getElementById(errorMessageId).textContent = 'Please fill in all fields.';
+      }
+    }
+
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      console.log("fger");
+    }
+
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    function eraseCookie(name) {
+      document.cookie = name + '=; Max-Age=-99999999;';
+    }
+
+    function completeRegistration(str) {
+      const inputs = document.querySelectorAll(`input`);
+      let isValid = true;
+      console.log("fewfewrfwffwffwfw");
+      thirdGame=TotalSecFractions;
+      console.log(TotalSecFractions);
+      timerStop();
+      printsth();
+
+      inputs.forEach(input => {
+        if (input.value.trim() === '') {
+          isValid = false;
+          console.log("fewfewrfwffwffwfw");
+        }
+      });
+
+      if (isValid) {
+        console.log(inputs);
+        inputs.forEach(input => {
+          console.log("....................");
+          const id = input.id;
+          const value = input.value;
+          formData[id] = value;
+          // Store the input value in a cookie
+          setCookie(id, value, 7); // Cookie expires in 7 days
+        });
+
+        // Perform any necessary validation or data submission using the formData object
+
+        // Close all pop-up windows and perform any desired actions
+        alert("Registration Complete!");
+        closePopups();
+      } else {
+        document.getElementById(`${currentPage}-error`).textContent = 'Please fill in all fields.';
+      }
+      window.location.href = 'index.html';
+    }
+
+    function closePopups() {
+      const popups = document.getElementsByClassName("form-page");
+      for (let i = 0; i < popups.length; i++) {
+        popups[i].style.display = "none";
+      }
+    }
+
+    // Restore input values from cookies (on page load)
+    window.onload = function () {
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach(input => {
+        const id = input.id;
+        const value = getCookie(id);
+        if (value) {
+          input.value = value;
+          console.log(value);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
