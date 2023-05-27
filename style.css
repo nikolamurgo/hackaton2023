@@ -3,6 +3,11 @@
 body{
     margin: 0;
 }
+nav{
+    padding-top: 25px;
+
+    background-color: #FAFAFA;
+}
 #navslika{
     width: 300px;
     margin-bottom: 10px;
@@ -16,7 +21,7 @@ body{
     float:right;
     border: 0px solid transparent;
     border-radius: 0.2em;
-    background-color: red;
+    background-color: #d02438;
     color: white;
     margin-top: 20px;
     margin-right: 40px;
@@ -100,4 +105,16 @@ body{
 }
 #imetoNaIgrata{
     margin-bottom: 5px;
+}
+#searchbar{
+    float: right;
+    width: 400px;
+    margin-top: 20px;
+
+}
+#burgerce{
+    float: right;
+    width: 40px;
+    margin-top: 20px;
+    margin-right: 40px;
 }
